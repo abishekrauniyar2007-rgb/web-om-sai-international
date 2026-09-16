@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f4ff" />
+  <title>Om Sai International — Building Materials You Can Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="intro" class="intro" aria-hidden="true">
+    <div class="intro-bg"></div>
+    <div class="intro-door intro-door-left"></div>
+    <div class="intro-door intro-door-right"></div>
+    <div class="intro-copy">
+      <div class="intro-kicker">OM SAI INTERNATIONAL</div>
+      <h1>LET’S OPEN THE DOOR</h1>
+      <p>TO BUILD YOUR DREAM HOME</p>
+    </div>
+    <div class="intro-progress"><span></span></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" data-nav="home">
+      <span class="brand-mark">OS</span>
+      <span><strong>Om Sai</strong><small>International</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#products" data-nav="products">Products</a>
+      <a href="#about" data-nav="about">About Us</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒<b id="cartCount">0</b></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#products" data-nav="products">Products</a>
+    <a href="#about" data-nav="about">About Us</a>
+    <a href="#admin" data-nav="admin">Admin Portal</a>
+  </div>
+
+  <main id="home">
+    <section class="hero section-pad">
+      <div class="hero-copy">
+        <span class="eyebrow">BUILDING MATERIALS YOU CAN TRUST</span>
+        <h2>Everything you need to <em>build beautifully.</em></h2>
+        <p>Quality construction materials, transparent pricing and dependable delivery across Parsa.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#products">Shop Materials <span>→</span></a>
+          <a class="ghost-btn" href="https://wa.me/9779845191093?text=Hello%20Om%20Sai%20International,%20I%20would%20like%20to%20know%20about%20your%20building%20materials." target="_blank" rel="noreferrer">WhatsApp Us</a>
+        </div>
+        <div class="trust-row"><span>✓ Fair pricing</span><span>✓ Local delivery</span><span>✓ Dealer support</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap"><img src="assets/dream-homes.png" alt="Modern homes in a green alpine landscape" /></div>
+        <div class="floating-card"><span class="dot"></span><div><strong>Build with confidence</strong><small>Materials selected for everyday projects</small></div></div>
+      </div>
+    </section>
+
+    <section class="quick-section section-pad" id="products">
+      <div class="section-heading"><div><span class="eyebrow">SHOP BY CATEGORY</span><h3>Pick what you need.</h3></div><span class="section-note">Simple. Fast. Clear.</span></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="products-section section-pad">
+      <div class="section-heading"><div><span class="eyebrow">PRODUCTS</span><h3 id="productHeading">Popular materials</h3></div><button class="text-btn" id="allProductsBtn">View all →</button></div>
+      <div class="filter-row" id="filterRow"></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="about-visual"><img src="assets/dream-homes.png" alt="Dream home inspiration" /></div>
+      <div class="about-copy">
+        <span class="eyebrow">ABOUT OM SAI INTERNATIONAL</span>
+        <h3>Materials today. Homes for years.</h3>
+        <p>We are a building-material supplier focused on value, ethics and customer satisfaction. Our goal is to make buying everyday construction materials easier and more dependable.</p>
+        <div class="about-cards">
+          <article><b>Vision</b><span>To be a trusted name in building materials and help customers build with confidence.</span></article>
+          <article><b>Mission</b><span>Offer reliable materials, fair pricing and practical service from order to delivery.</span></article>
+          <article><b>Core Values</b><span>Trust, honesty, value, responsibility and customer-first service.</span></article>
+          <article><b>What We Do</b><span>Cement, TMT, paints, plumbing, binding wire, equipment, nails and more.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section-pad">
+      <div><span class="eyebrow">READY TO BUILD?</span><h3>Tell us what your project needs.</h3></div>
+      <a class="primary-btn" href="https://wa.me/9779845191093?text=Hello%20Om%20Sai%20International,%20I%20need%20building%20materials%20for%20my%20project." target="_blank" rel="noreferrer">Chat on WhatsApp →</a>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Om Sai International</span><span>Radhemai, Birgunj, Nepal · +977 9845191093</span><a href="#admin" data-nav="admin">Admin</a></footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR ORDER</span><h3>Cart</h3></div><button class="close-btn" id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary" id="cartSummary"></div>
+    <button class="primary-btn full" id="checkoutBtn">Continue to checkout</button>
+    <a class="whatsapp-btn full" id="cartWhatsApp" target="_blank" rel="noreferrer">Order via WhatsApp</a>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <div class="modal" id="productModal"><div class="modal-card"><button class="close-btn" data-close="productModal">×</button><div id="productModalBody"></div></div></div>
+  <div class="modal" id="checkoutModal"><div class="modal-card checkout-card"><button class="close-btn" data-close="checkoutModal">×</button><span class="eyebrow">CHECKOUT</span><h3>Complete your order</h3><div id="checkoutSummary"></div><form id="checkoutForm"><label>Name*<input required name="name" /></label><label>Phone number*<input required name="phone" inputmode="tel" /></label><label>Address*<textarea required name="address" rows="3"></textarea></label><div class="payment-options"><label><input type="radio" name="payment" value="cod" checked /> Cash on Delivery</label><label><input type="radio" name="payment" value="esewa" /> eSewa QR</label></div><div id="esewaBox" class="esewa-box hidden"><img src="assets/esewa-qr.jpeg" alt="eSewa QR code"/><p>Scan the QR, then enter your <strong>Transaction ID or phone number</strong> below.</p><label>Transaction ID / Phone<input name="transaction" /></label></div><button class="primary-btn full" type="submit">Place order</button></form></div></div>
+
+  <div class="modal" id="adminModal"><div class="modal-card admin-card"><button class="close-btn" data-close="adminModal">×</button><div id="adminRoot"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

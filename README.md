@@ -23,3 +23,6 @@ This version intentionally has **no Neon/Postgres/backend**. Because GitHub Page
 Open `index.html` directly, or deploy the folder to GitHub Pages. A simple local server is recommended for best browser behavior.
 
 Admin portal: click **Admin** and use the current demo password shown on the login screen.
+
+
+V6 updates: 3-second cinematic tech-style intro with vanishing text; dream-home image is now the full-screen homepage hero background for reduced scrolling.

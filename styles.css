@@ -285,3 +285,25 @@
 .cart-bar-arrow{width:48px;height:48px;background:var(--purple);color:#fff;font-size:24px}
 .cart-bar-thumb{width:46px;height:46px}
 @media(max-width:560px){.hero-quick-actions{gap:8px}.location-card{width:48px;height:48px;border-radius:14px}.location-card-icon{border-radius:14px;font-size:21px}.quote-card{padding:11px 12px}.cart-bar{width:calc(100% - 16px);bottom:9px;min-height:64px;grid-template-columns:auto 1fr auto}.cart-bar-thumb{width:44px;height:44px}.cart-bar-arrow{width:44px;height:44px}.cart-bar-center strong{font-size:15px}}
+
+/* V12 — cleaner hero controls + always-visible cart icon */
+.trust-row{display:none!important}
+.hero-main-actions{display:flex;align-items:center;gap:10px;margin-top:20px}
+.hero-main-actions .primary-btn{margin:0}
+.hero-main-actions .location-card{display:grid;position:static;width:50px;height:50px;padding:0;margin:0;border-radius:15px;flex:0 0 50px;place-items:center}
+.hero-main-actions .location-card-icon{width:100%;height:100%;border-radius:15px;background:transparent;font-size:23px}
+.hero-main-actions .location-card:hover{transform:translateY(-2px) scale(1.03)}
+.hero-quick-actions{display:block;margin-top:12px;max-width:560px}
+.hero-quick-actions .quote-card{width:100%;box-sizing:border-box}
+.cart-bar{grid-template-columns:auto auto 1fr auto auto!important}
+.cart-bar-icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#f0ebff;color:var(--purple);flex:0 0 auto}
+.cart-bar-icon svg{width:19px;height:19px}
+.cart-bar-center{text-align:left}
+@media(max-width:560px){
+  .hero-main-actions{margin-top:16px;gap:8px}
+  .hero-main-actions .location-card{width:46px;height:46px;flex-basis:46px;border-radius:13px}
+  .hero-main-actions .location-card-icon{border-radius:13px;font-size:21px}
+  .hero-quick-actions{margin-top:10px}
+  .cart-bar{grid-template-columns:auto auto 1fr auto!important;width:calc(100% - 16px);min-height:64px}
+  .cart-bar-icon{width:34px;height:34px}
+}

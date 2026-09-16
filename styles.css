@@ -328,3 +328,27 @@
 .hero-main-actions .location-card{display:none!important}
 @media(max-width:900px){.hero-location-pin{top:13%;right:5%;width:58px;height:58px}.hero-location-pin-icon{width:31px;height:31px;font-size:22px}}
 @media(max-width:560px){.hero-location-pin{top:11%;right:4.5%;width:58px;height:58px;border-width:3px}.hero-location-pin-icon{width:32px;height:32px;font-size:23px}}
+
+
+/* V15 — refined hero icons and exact placement */
+.shop-materials-btn{position:relative;display:grid!important;grid-template-columns:40px 1fr 40px;align-items:center;min-height:56px;padding:8px 12px!important;gap:6px;}
+.shop-materials-btn>span:nth-child(2){text-align:center;}
+.shop-materials-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.16);color:#fff;}
+.shop-materials-icon svg{width:21px;height:21px;}
+.shop-materials-arrow{font-size:22px;line-height:1;text-align:center;color:#fff;}
+.quote-card{display:grid!important;grid-template-columns:52px 1fr auto;align-items:center;gap:13px;}
+.quote-card-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#f0ebff;color:var(--purple);flex:0 0 auto;}
+.quote-card-icon svg{width:25px;height:25px;}
+.floating-arrow{font-size:24px;color:var(--purple);line-height:1;padding:0 3px;}
+.hero-location-pin{top:11%;right:4.5%;width:64px;height:64px;border-radius:50%;background:rgba(123,97,216,.96);border:4px solid rgba(255,255,255,.94);box-shadow:0 12px 28px rgba(71,48,132,.24),0 0 0 6px rgba(255,255,255,.30);}
+.hero-location-pin-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--purple);font-size:0;}
+.hero-location-pin-icon svg{width:25px;height:25px;}
+@media(max-width:900px){.hero-location-pin{top:10%;right:4%;width:62px;height:62px}.hero-location-pin-icon{width:38px;height:38px}}
+@media(max-width:560px){
+ .shop-materials-btn{grid-template-columns:36px 1fr 36px;min-height:54px;padding:7px 10px!important;gap:4px;}
+ .shop-materials-icon{width:34px;height:34px;border-radius:10px}.shop-materials-icon svg{width:19px;height:19px}.shop-materials-arrow{font-size:20px}
+ .quote-card{grid-template-columns:48px 1fr auto;gap:11px;padding:10px 12px!important;}
+ .quote-card-icon{width:48px;height:48px;border-radius:14px}.quote-card-icon svg{width:23px;height:23px}.floating-arrow{font-size:22px}
+ .hero-location-pin{top:9%;right:4%;width:58px;height:58px;border-width:3px}
+ .hero-location-pin-icon{width:36px;height:36px}.hero-location-pin-icon svg{width:23px;height:23px}
+}

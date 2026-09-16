@@ -3,9 +3,9 @@ const ORDERS='omSaiOrdersV1';
 const ADMIN='omSaiAdminV1';
 const WA='+9779845191093';
 const defaultData={categoryImages:{},delivery:{cementThreshold:20,cementCharge:25,tmtBundleThreshold:4,tmtCharge:150,otherBillThreshold:5000,otherCharge:100},categories:['Cement','TMT','Binding Wire','Paints','Plumbing','Equipment','Nails','Others'],products:[
-{id:'cem-jagdamba',category:'Cement',name:'PPC Cement',brand:'Jagdamba',unit:'Bag',price:500,image:'cement.svg'},
+{id:'cem-jagdamba',category:'Cement',name:'PPC Cement',brand:'Jagdamba',unit:'Bag',price:500,image:'jagdamba-ppc-cement.png'},
 {id:'cem-vishwa',category:'Cement',name:'PPC Cement',brand:'Vishwakarma',unit:'Bag',price:500,image:'cement.svg'},
-{id:'cem-ultra',category:'Cement',name:'OPC Cement',brand:'Ultra',unit:'Bag',price:600,image:'cement.svg'},
+{id:'cem-ultra',category:'Cement',name:'OPC Cement',brand:'Ultra',unit:'Bag',price:600,image:'ultra-opc-cement.png'},
 {id:'tmt-8',category:'TMT',name:'8 mm TMT',brand:'Jagdamba',unit:'Kg',price:103.5,kgPiece:5,kgBundle:100,image:'tmt.svg'},
 {id:'tmt-10',category:'TMT',name:'10 mm TMT',brand:'Jagdamba',unit:'Kg',price:100,kgPiece:7.5,kgBundle:110,image:'tmt.svg'},
 {id:'tmt-12',category:'TMT',name:'12 mm TMT',brand:'Jagdamba',unit:'Kg',price:100,kgPiece:11,kgBundle:110,image:'tmt.svg'},
@@ -46,10 +46,10 @@ const defaultData={categoryImages:{},delivery:{cementThreshold:20,cementCharge:2
 {id:'hammer',category:'Equipment',name:'Hammer',brand:'Pashupati',unit:'Piece',price:500,image:'equipment.svg'},
 {id:'kabja',category:'Others',name:'Kabja',brand:'',unit:'Kg',price:150,image:'others.svg'}]};
 let data=loadData(),cart=JSON.parse(localStorage.getItem('omSaiCartV1')||'[]'),activeCategory='All',visibleProductCount=12,selectedFulfillment='delivery';
-function loadData(){try{const saved=JSON.parse(localStorage.getItem(STORAGE)); if(saved){saved.categoryImages=saved.categoryImages||{}; return saved} return structuredClone(defaultData)}catch{return structuredClone(defaultData)}}
+function loadData(){try{const saved=JSON.parse(localStorage.getItem(STORAGE)); if(saved){saved.categoryImages=saved.categoryImages||{}; if(Array.isArray(saved.products)){saved.products=saved.products.map(p=>{if(p.id==='cem-jagdamba'){p.image='jagdamba-ppc-cement.png';delete p.imageData} if(p.id==='cem-ultra'){p.image='ultra-opc-cement.png';delete p.imageData} return p})} return saved} return structuredClone(defaultData)}catch{return structuredClone(defaultData)}}
 function saveData(){localStorage.setItem(STORAGE,JSON.stringify(data));renderAll()}
 function money(n){return '₹'+Number(n||0).toLocaleString('en-IN',{maximumFractionDigits:2})}
-function img(p){return p.imageData||('assets/'+(p.image||'cement.svg'))}
+function img(p){if(p?.id==='cem-jagdamba')return 'assets/jagdamba-ppc-cement.png';if(p?.id==='cem-ultra')return 'assets/ultra-opc-cement.png';return p.imageData||('assets/'+(p.image||'cement.svg'))}
 function categoryImg(c){return data.categoryImages?.[c]||'assets/'+({Cement:'cement.svg',TMT:'tmt.svg','Binding Wire':'wire.svg',Paints:'paint.svg',Plumbing:'plumbing.svg',Equipment:'equipment.svg',Nails:'nails.svg',Others:'others.svg'}[c]||'others.svg')}
 function readImage(file,cb){if(!file)return cb('');if(file.size>2*1024*1024){toast('Image must be 2MB or smaller');return cb('')}const r=new FileReader();r.onload=()=>cb(r.result);r.readAsDataURL(file)}
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2400)}

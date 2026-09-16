@@ -34,7 +34,6 @@
       <a href="#about" data-nav="about">About Us</a>
     </nav>
     <div class="header-actions">
-      <a class="location-link" href="https://maps.app.goo.gl/vWXjMg1chfUAhqs87?g_st=iw" target="_blank" rel="noreferrer" aria-label="Open Om Sai International location in Google Maps"><span class="location-icon">📍</span><span class="location-copy"><strong>Om Sai International</strong><small>Radhemai, Birgunj, Nepal</small></span></a>
       <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒<b id="cartCount">0</b></button>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
@@ -54,13 +53,17 @@
         <p>Quality construction materials, transparent pricing and dependable delivery across Parsa.</p>
         <div class="hero-actions">
           <a class="primary-btn" href="#products">Shop Materials <span>→</span></a>
-          <a class="ghost-btn" href="https://wa.me/9779845191093?text=Hello%20Om%20Sai%20International,%20I%20would%20like%20to%20know%20about%20your%20building%20materials." target="_blank" rel="noreferrer">Bulk Order on WhatsApp</a>
+          <a class="ghost-btn" href="https://wa.me/9779845191093?text=Hello%20Om%20Sai%20International,%20I%20would%20like%20to%20know%20about%20your%20building%20materials." target="_blank" rel="noreferrer">WhatsApp Us</a>
         </div>
         <div class="trust-row"><span>✓ Fair pricing</span><span>✓ Local delivery</span><span>✓ Dealer support</span></div>
+        <div class="hero-quick-actions">
+          <a class="location-card" href="https://maps.app.goo.gl/vWXjMg1chfUAhqs87?g_st=iw" target="_blank" rel="noreferrer" aria-label="Open Om Sai International in Google Maps"><span class="location-card-icon">📍</span><div><strong>Find us on Google Maps</strong><small>Tap to open our shop location</small></div><span class="floating-arrow">↗</span></a>
+          <a class="quote-card" href="https://wa.me/9779845191093?text=Hello%20Om%20Sai%20International,%20I%20would%20like%20a%20quick%20quotation%20for%20a%20bulk%20order." target="_blank" rel="noreferrer"><span class="quote-card-icon">▤</span><div><strong>Quick quotation for bulk order</strong><small>Send your requirement on WhatsApp</small></div><span class="floating-arrow">→</span></a>
+        </div>
       </div>
       <div class="hero-visual">
         <div class="hero-image-wrap"><img src="assets/dream-homes.png" alt="Modern homes in a green alpine landscape" /></div>
-        <a class="floating-card" href="#product-list" onclick="openPopularMaterials(event)"><span class="dot"></span><div><strong>Build with confidence</strong><small>Explore popular materials across every category</small></div><span class="floating-arrow">→</span></a>
+        <div class="address-card"><span class="address-card-mark">⌂</span><div><strong>Om Sai International</strong><small>Radhemai, Birgunj, Nepal</small></div></div>
       </div>
     </section>
 
@@ -93,7 +96,7 @@
 
     <section class="cta-section section-pad">
       <div><span class="eyebrow">READY TO BUILD?</span><h3>Tell us what your project needs.</h3></div>
-      <span class="bulk-order-note">Need a large quantity? Use the bulk-order WhatsApp button at the top.</span>
+      <span class="bulk-order-note">Need a large quantity? Use the quick quotation option above.</span>
     </section>
   </main>
 
@@ -106,7 +109,12 @@
     <button class="primary-btn full" id="checkoutBtn">Continue to checkout</button>
     <a class="whatsapp-btn full" id="cartWhatsApp" target="_blank" rel="noreferrer">Order via WhatsApp</a>
   </aside>
-  <div class="cart-bar" id="cartBar"><div><strong id="cartBarCount">0 items</strong><span id="cartBarTotal">₹0</span></div><div class="cart-bar-actions"><button class="ghost-btn" id="cartBarView">View cart</button><button class="primary-btn" id="cartBarCheckout">Place order →</button></div></div>
+  <button class="cart-bar" id="cartBar" type="button" aria-label="View cart">
+    <span class="cart-bar-thumbs" id="cartBarThumbs"></span>
+    <span class="cart-bar-center"><strong>View cart</strong><span id="cartBarCount">0 items</span></span>
+    <span class="cart-bar-total" id="cartBarTotal">₹0</span>
+    <span class="cart-bar-arrow">→</span>
+  </button>
   <div class="backdrop" id="backdrop"></div>
 
   <div class="modal" id="productModal"><div class="modal-card"><button class="close-btn" data-close="productModal">×</button><div id="productModalBody"></div></div></div>

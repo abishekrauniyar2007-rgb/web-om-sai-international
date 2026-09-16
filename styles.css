@@ -238,3 +238,34 @@
 .cart-control-stack{display:grid;gap:6px;margin-top:7px}.cart-control-stack>label{font-size:9px;color:#777181;font-weight:700}.cart-control-stack select{display:block;margin-top:3px;border:1px solid var(--line);border-radius:7px;padding:5px 7px;font-size:10px;background:#fff;width:100%}
 @media(max-width:900px){.location-copy{display:none}.location-link{padding:6px}.location-link .location-icon{width:29px;height:29px}.header-actions{gap:6px}.cart-bar{bottom:10px}.cart-bar-actions button{padding:9px 11px}}
 @media(max-width:560px){.location-link{display:none}.cart-bar{width:calc(100% - 20px);padding:9px 10px 9px 13px;border-radius:16px}.cart-bar strong{font-size:11px}.cart-bar>div:first-child span{font-size:12px}.cart-bar-actions button{font-size:10px;padding:9px 10px}.more-products-wrap{padding-top:18px}.bulk-order-note{font-size:11px}}
+
+
+/* V10 — cleaner header, address + map + bulk quote cards, grocery-style cart popup */
+.location-link{display:none!important}
+.hero-quick-actions{display:grid;gap:9px;margin-top:20px;max-width:560px}
+.address-card,.location-card,.quote-card{display:flex;align-items:center;gap:11px;padding:12px 13px;border-radius:16px;text-decoration:none;transition:.2s;min-width:0}.hero-visual>.address-card{margin-top:10px}
+.address-card{background:rgba(255,255,255,.86);border:1px solid rgba(225,218,240,.95);color:var(--ink);backdrop-filter:blur(12px)}
+.address-card:hover,.quote-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(68,47,125,.1)}
+.address-card-mark,.quote-card-icon,.location-card-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:0 0 auto;font-size:18px;font-weight:800}
+.address-card-mark,.quote-card-icon{background:#f0ebff;color:var(--purple)}
+.location-card{background:linear-gradient(135deg,#6d4bc5,#8a68e0);color:#fff;border:1px solid rgba(255,255,255,.22);box-shadow:0 12px 28px rgba(89,60,160,.2)}
+.location-card:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(89,60,160,.25)}
+.location-card-icon{background:rgba(255,255,255,.16);font-size:19px}
+.quote-card{background:#fff;border:1px solid #e5ddf7;color:var(--ink)}
+.address-card div,.location-card div,.quote-card div{min-width:0;flex:1}
+.address-card strong,.location-card strong,.quote-card strong{display:block;font:800 12px Manrope;line-height:1.25}
+.address-card small,.location-card small,.quote-card small{display:block;font-size:10px;margin-top:3px;opacity:.78;line-height:1.35}
+.location-card small{opacity:.9}
+.cart-bar{position:fixed;z-index:55;left:50%;bottom:18px;transform:translate(-50%,24px) scale(.97);width:min(430px,calc(100% - 28px));min-height:64px;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:10px;padding:7px 9px 7px 8px;border:1px solid rgba(213,202,244,.95);border-radius:34px;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);box-shadow:0 18px 55px rgba(46,30,92,.2);opacity:0;pointer-events:none;transition:.28s cubic-bezier(.2,.8,.2,1);cursor:pointer;text-align:left}
+.cart-bar.show{opacity:1;transform:translate(-50%,0) scale(1);pointer-events:auto}
+.cart-bar-thumbs{display:flex;align-items:center;padding-left:1px;min-width:45px}
+.cart-bar-thumb{width:43px;height:43px;border-radius:50%;background:#f3efff;border:3px solid #fff;display:grid;place-items:center;overflow:hidden;box-shadow:0 3px 12px rgba(40,25,80,.1);margin-left:-9px}
+.cart-bar-thumb:first-child{margin-left:0}
+.cart-bar-thumb img{width:78%;height:78%;object-fit:contain}
+.cart-bar-center{display:grid;gap:1px;min-width:0}
+.cart-bar-center strong{font:800 15px Manrope;color:var(--ink);white-space:nowrap}
+.cart-bar-center span{font-size:10px;color:var(--muted);white-space:nowrap}
+.cart-bar-total{font:800 11px Manrope;color:var(--purple);white-space:nowrap}
+.cart-bar-arrow{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#eee8ff;color:var(--purple);font-size:23px;font-weight:800;flex:0 0 auto}
+.cart-bar:active{transform:translate(-50%,0) scale(.98)}
+@media(max-width:560px){.hero-quick-actions{margin-top:17px}.hero-visual>.address-card{margin-top:8px}.address-card,.location-card,.quote-card{padding:11px 12px}.cart-bar{width:calc(100% - 18px);bottom:10px;min-height:62px;grid-template-columns:auto 1fr auto auto;gap:8px}.cart-bar-thumb{width:40px;height:40px}.cart-bar-arrow{width:42px;height:42px}.cart-bar-center strong{font-size:14px}.cart-bar-total{font-size:10px}}

@@ -45,7 +45,7 @@ const defaultData={categoryImages:{},delivery:{cementThreshold:20,cementCharge:2
 {id:'kathara',category:'Equipment',name:'Kathara',brand:'Pashupati',unit:'Piece',price:300,image:'equipment.svg'},
 {id:'hammer',category:'Equipment',name:'Hammer',brand:'Pashupati',unit:'Piece',price:500,image:'equipment.svg'},
 {id:'kabja',category:'Others',name:'Kabja',brand:'',unit:'Kg',price:150,image:'others.svg'}]};
-let data=loadData(),cart=JSON.parse(localStorage.getItem('omSaiCartV1')||'[]'),activeCategory='All',visibleProductCount=12;
+let data=loadData(),cart=JSON.parse(localStorage.getItem('omSaiCartV1')||'[]'),activeCategory='All',visibleProductCount=12,selectedFulfillment='delivery';
 function loadData(){try{const saved=JSON.parse(localStorage.getItem(STORAGE)); if(saved){saved.categoryImages=saved.categoryImages||{}; return saved} return structuredClone(defaultData)}catch{return structuredClone(defaultData)}}
 function saveData(){localStorage.setItem(STORAGE,JSON.stringify(data));renderAll()}
 function money(n){return '₹'+Number(n||0).toLocaleString('en-IN',{maximumFractionDigits:2})}
